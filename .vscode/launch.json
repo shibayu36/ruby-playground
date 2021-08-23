@@ -8,8 +8,7 @@
             "name": "Debug Local File",
             "type": "Ruby",
             "request": "launch",
-            "program": "${file}",
-            "useBundler": true
+            "program": "${file}"
         }
     ]
 }
