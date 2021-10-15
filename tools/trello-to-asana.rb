@@ -7,6 +7,13 @@ Trello.configure do |config|
   config.member_token = ENV['TRELLO_MEMBER_TOKEN']
 end
 
-shibayu36 = Trello::Member.find('shibayu36')
-puts shibayu36.full_name
-pp Trello::Board.find('BsK3ck9C').lists.first
+lists = Trello::Board.find(ENV['TRELLO_BOARD_ID']).lists
+lists.each do |list|
+  puts "======== #{list.name} ========"
+  list.cards.each do |card|
+    puts card.name
+    puts card.desc
+    puts card.labels.map(&:name).join(',')
+    puts ''
+  end
+end
