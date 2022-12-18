@@ -2,10 +2,10 @@ class Log
   def initialize(host:, user:, epoch:, req:, status:, size:, referer:)
     @host = host
     @user = user
-    @epoch = epoch
+    @epoch = epoch.to_i
     @req = req
-    @status = status
-    @size = size
+    @status = status.to_i
+    @size = size.to_i
     @referer = referer
   end
 
