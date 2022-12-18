@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Ltsv
   class Log
     def initialize(host:, user:, epoch:, req:, status:, size:, referer:)
