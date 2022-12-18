@@ -11,3 +11,5 @@ gem "ruby-trello", "~> 3.0"
 gem "asana"
 
 gem "rails", "~> 6.1"
+
+gem "rspec", "~> 3.12"
