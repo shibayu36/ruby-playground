@@ -2,9 +2,9 @@
 
 require 'ltsv/log'
 
-describe Log do
+describe Ltsv::Log do
   let(:log) do
-    Log.new(
+    Ltsv::Log.new(
       host: '127.0.0.1',
       user: 'frank',
       epoch: '1372694390',
