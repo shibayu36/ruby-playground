@@ -13,7 +13,7 @@ describe Ltsv::Parser do
 
   describe '#parse' do
     it do
-      parser = Ltsv::Parser.new(filename: File.join(File.dirname(__FILE__), '../fixtures/files/1.ltsv'))
+      parser = Ltsv::Parser.new(filename: File.expand_path('../fixtures/files/1.ltsv', File.dirname(__FILE__)))
       parser.parse
     end
   end
