@@ -14,7 +14,7 @@ describe Ltsv::Parser do
 
   describe '#parse' do
     it 'returns parsed array' do
-      parser = Ltsv::Parser.new(filename: File.expand_path('../fixtures/files/1.ltsv', File.dirname(__FILE__)))
+      parser = Ltsv::Parser.new(filename: File.expand_path('../fixtures/files/1.ltsv', __dir__))
       result = parser.parse
 
       expect(result[0].host).to eq '127.0.0.1'
