@@ -2,6 +2,8 @@
 
 module Ltsv
   class Log
+    attr_reader :host, :user, :epoch, :req, :status, :size, :referer
+
     def initialize(host:, user:, epoch:, req:, status:, size:, referer:)
       @host = host
       @user = user
