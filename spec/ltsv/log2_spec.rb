@@ -18,6 +18,18 @@ describe Ltsv::Log2 do
     )
   end
 
+  describe '.new' do
+    it 'makes accessors by field keys' do
+      expect(log.host).to eq host
+      expect(log.user).to eq 'frank'
+      expect(log.epoch).to eq epoch
+      expect(log.req).to eq req
+      expect(log.status).to eq '200'
+      expect(log.size).to eq '2326'
+      expect(log.referer).to eq 'http://www.hatena.ne.jp/'
+    end
+  end
+
   describe '#method' do
     context 'when req is defined' do
       it 'returns method name in req' do
