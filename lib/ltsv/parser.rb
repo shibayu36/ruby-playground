@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'ltsv/log'
+require 'ltsv/log2'
 
 module Ltsv
   class Parser
@@ -14,7 +14,7 @@ module Ltsv
           key_val = field.split(':', 2)
           [key_val[0].to_sym, key_val[1] == '-' ? nil : key_val[1]]
         end
-        Ltsv::Log.new(**fields.to_h)
+        Ltsv::Log2.new(**fields.to_h)
       end
     end
   end
