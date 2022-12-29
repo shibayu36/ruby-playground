@@ -15,16 +15,13 @@ class Heap
   def push(val)
     @nodes.push(val)
 
-    return if size <= 1
-
     current_index = size - 1
     parent_index = parent_of(size - 1)
 
-    while @nodes[parent_index] > @nodes[current_index]
+    while current_index > 0 && @nodes[parent_index] > @nodes[current_index]
       swap(parent_index, current_index)
       current_index = parent_index
       parent_index = parent_of(current_index)
-      break if current_index == 0
     end
   end
 
