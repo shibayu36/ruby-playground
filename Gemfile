@@ -13,3 +13,5 @@ gem "asana"
 gem "rails", "~> 6.1"
 
 gem "rspec", "~> 3.12"
+
+gem "debug", "~> 1.7"
