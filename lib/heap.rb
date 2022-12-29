@@ -1,5 +1,3 @@
-require 'debug'
-
 class Heap
   attr_reader :nodes
 
