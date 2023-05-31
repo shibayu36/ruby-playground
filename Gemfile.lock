@@ -107,6 +107,9 @@ GEM
     http-accept (1.7.0)
     http-cookie (1.0.4)
       domain_name (~> 0.5)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
@@ -257,6 +260,8 @@ PLATFORMS
 DEPENDENCIES
   asana
   debug (~> 1.7)
+  httparty
+  nokogiri
   rails (~> 6.1)
   rspec (~> 3.12)
   rubocop (~> 1.22.1)
